@@ -211,10 +211,17 @@ function Garage() {
 	    <ul>
         {cars.map((car) => <Car brand={car} />)}
       </ul>
+      <My />
     </>
   );
 }
 
+function My () {
+  const hello = this.h1("Hello there");
+  return (
+    <h1>{hello}</h1>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Garage />);
