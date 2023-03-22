@@ -223,5 +223,6 @@ function My () {
   );
 }
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Garage />);
