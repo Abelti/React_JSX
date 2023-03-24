@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {createRoot} from 'react-dom/client'
-/*
-//ReactDOM.render(<h1>Testing</h1>, document.getElementById('root'));
+
+ReactDOM.render(<h1>Testing</h1>, document.getElementById('root'));
 
 //with jsx
 
@@ -107,9 +107,9 @@ root10.render(ifel);
 
 const y = 6;
 
-// const var2 = <h1>{ (x) < 5 ? "less than ten" : "the value is ten" }</h1>;
-// const root11 = ReactDOM.createRoot(document.getElementById('root'));
-// root11.render(var2);
+const var2 = <h1>{ (x) < 5 ? "less than ten" : "the value is ten" }</h1>;
+const root11 = ReactDOM.createRoot(document.getElementById('root'));
+root11.render(var2);
 
 //loops
 
@@ -162,42 +162,31 @@ function App2() {
   );
 }
 
-
-const persons = [
-  {firstname : "Malcom", lastname: "Reynolds"},
-  {firstname : "Kaylee", lastname: "Frye"},
-  {firstname : "Jayne", lastname: "Cobb"}
-];
-
-
-function getFullName(item) {
-  return [item.firstname,item.lastname].join(" ");
-}
-persons.map(getFullName);
-
-// const loope = <h1>{text}</h1>;
-
-*/
-/*
+// map function with keys
 function Car(props) {
   return <li>I am a { props.brand }</li>;
 }
 
 function Garage() {
   const cars = [
-    {id: 1, brand: 'Ford'},
+    {id: 1, brand: 'Ford', nation: 'Ethiopian'},
     {id: 2, brand: 'BMW'},
     {id: 3, brand: 'Audi'}
   ];
   return (
     <>
 	    <h1>Who lives in my garage?</h1>
+      <p>hello</p>
+      <p>there</p>
 	    <ul>
         {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
+
       </ul>
     </>
   );
-}*/
+}
+
+//map function without keys
 
 function Car(props) {
   return <li>I am a { props.brand }</li>;
@@ -216,13 +205,7 @@ function Garage() {
   );
 }
 
-function My () {
-  const hello = this.h1("Hello there");
-  return (
-    <h1>{hello}</h1>
-  );
-}
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Garage />);
+root.render(<App />);
